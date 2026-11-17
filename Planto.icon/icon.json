@@ -1,9 +1,7 @@
 {
   "fill-specializations" : [
     {
-      "value" : {
-        "solid" : "extended-gray:1.00000,1.00000"
-      }
+      "value" : "system-dark"
     },
     {
       "appearance" : "dark",
@@ -40,7 +38,7 @@
           "blend-mode-specializations" : [
             {
               "appearance" : "dark",
-              "value" : "multiply"
+              "value" : "normal"
             }
           ],
           "hidden" : false,
@@ -113,6 +111,7 @@
       "layers" : [
 
       ],
+      "name" : "Group",
       "shadow" : {
         "kind" : "neutral",
         "opacity" : 0.5

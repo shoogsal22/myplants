@@ -1,4 +1,4 @@
-import SwiftUI
+ import SwiftUI
 
 /// واجهة "All Done!" (لما تنسقي كل النباتات)
 struct AllDoneView: View {

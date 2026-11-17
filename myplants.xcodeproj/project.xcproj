@@ -11,8 +11,59 @@
     ],
   },
   "files": [
-    { "kind": "folder", "path": "myplants", "target-membership": [ "myplants" ] },
+    { "path": "Assets.xcassets", "target-membership": [ "myplants/resources" ] },
+    { "path": "PlantoApp.swift", "target-membership": [ "myplants/compile-sources" ] },
+    { "path": "Planto.icon", "target-membership": [ "myplants/resources" ] },
     {
+      "kind": "group",
+      "path": "Components",
+      "children": [
+        { "path": "Chip.swift", "target-membership": [ "myplants/compile-sources" ] },
+        { "path": "FormComponents.swift", "target-membership": [ "myplants/compile-sources" ] },
+        { "path": "PlantRow.swift", "target-membership": [ "myplants/compile-sources" ] },
+      ],
+    }, {
+      "kind": "group",
+      "path": "Views",
+      "children": [
+        { "path": "AllDoneView.swift", "target-membership": [ "myplants/compile-sources" ] },
+        { "path": "MyPlantsView.swift", "target-membership": [ "myplants/compile-sources" ] },
+        { "path": "OnboardingView.swift", "target-membership": [ "myplants/compile-sources" ] },
+        { "path": "PlantFormView.swift", "target-membership": [ "myplants/compile-sources" ] },
+        { "path": "PlantListView.swift", "target-membership": [ "myplants/compile-sources" ] },
+      ],
+    }, {
+      "kind": "group",
+      "path": "ViewModels",
+      "children": [
+        { "path": "PlantFormViewModel.swift", "target-membership": [ "myplants/compile-sources" ] },
+        { "path": "PlantsViewModel.swift", "target-membership": [ "myplants/compile-sources" ] },
+      ],
+    }, {
+      "kind": "group",
+      "path": "Theme",
+      "children": [
+        { "path": "Theme.swift", "target-membership": [ "myplants/compile-sources" ] },
+      ],
+    }, {
+      "kind": "group",
+      "path": "Models",
+      "children": [
+        { "path": "Plant.swift", "target-membership": [ "myplants/compile-sources" ] },
+      ],
+    }, {
+      "kind": "group",
+      "path": "Services",
+      "children": [
+        { "path": "NotificationManager.swift", "target-membership": [ "myplants/compile-sources" ] },
+      ],
+    }, {
+      "kind": "group",
+      "path": "Repositories",
+      "children": [
+        { "path": "PlantRepository.swift", "target-membership": [ "myplants/compile-sources" ] },
+      ],
+    }, {
       "kind": "group",
       "name": "Products",
       "children": [
@@ -32,12 +83,14 @@
         "resources",
       ],
       "build-settings": {
+        "ASSETCATALOG_COMPILER_APPICON_NAME": "Planto",
         "CODE_SIGN_STYLE": "Automatic",
         "CURRENT_PROJECT_VERSION": "1",
         "ENABLE_APP_SANDBOX": "YES",
         "ENABLE_PREVIEWS": "YES",
         "ENABLE_USER_SELECTED_FILES": "readonly",
         "GENERATE_INFOPLIST_FILE": "YES",
+        "INFOPLIST_KEY_CFBundleDisplayName": "Planto",
         "INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]": "YES",
         "INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]": "YES",
         "INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]": "YES",
