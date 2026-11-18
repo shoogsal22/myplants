@@ -10,7 +10,7 @@ struct OnboardingView: View {
             Image("plantMascot")
                 .resizable()
                 .scaledToFit()
-                .frame(height: 200)
+                .frame(height: 260)
             Text("Start your plant journey!")
                 .font(.title2.bold())
             Text("Now all your plants will be in one place and we will help you take care of them :)🪴")
@@ -28,7 +28,7 @@ struct OnboardingView: View {
                     .background(Color.plantGreen, in: Capsule())
             }
             .padding(.horizontal, 32)
-            .padding(.bottom, 48)
+            .padding(.bottom, 100)
         }
         .frame(maxWidth: .infinity)
     }

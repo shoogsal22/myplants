@@ -8,7 +8,7 @@ struct AllDoneView: View {
             Image("plantMascot")
                 .resizable()
                 .scaledToFit()
-                .frame(height: 200)
+                .frame(height: 260)
             Text("All Done! 🎉").font(.title2.bold())
             Text("All Reminders Completed")
                 .font(.callout)

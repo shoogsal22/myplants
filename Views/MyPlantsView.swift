@@ -20,6 +20,8 @@ struct MyPlantsView: View {
                 switch viewModel.screenState {
                 case .empty:
                     OnboardingView { showForm = true }
+                case .noReminders:
+                    NoRemindersView()
                 case .inProgress:
                     PlantListView(editingPlant: $editingPlant)
                 case .allDone:

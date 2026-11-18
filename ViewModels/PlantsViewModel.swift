@@ -6,25 +6,28 @@ import Observation
 final class PlantsViewModel {
 
     enum ScreenState {
-        case empty        // Start your plant journey!
+        case empty        // Start your plant journey! (أول مرة بس)
+        case noReminders  // No reminders set yet.. (بعد ما تحذف كل النباتات)
         case inProgress   // قائمة اليوم
         case allDone      // All Done!
     }
 
     private(set) var plants: [Plant] = []
+    private(set) var hasAddedPlant = false
 
     @ObservationIgnored private let repository: PlantRepository
 
     init(repository: PlantRepository = UserDefaultsPlantRepository()) {
         self.repository = repository
         self.plants = repository.load()
+        self.hasAddedPlant = !plants.isEmpty
         resetIfNewDay()
     }
 
     // MARK: - State للعرض
 
     var screenState: ScreenState {
-        if plants.isEmpty { return .empty }
+        if plants.isEmpty { return hasAddedPlant ? .noReminders : .empty }
         return wateredCount == plants.count ? .allDone : .inProgress
     }
 
@@ -48,6 +51,7 @@ final class PlantsViewModel {
             plants[index] = plant
         } else {
             plants.append(plant)
+            hasAddedPlant = true
         }
         persist()
         NotificationManager.schedule(for: plant)
